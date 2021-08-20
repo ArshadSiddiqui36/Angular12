@@ -1,0 +1,60 @@
+<h1>Advance Forms - Template Driven Form & Reactive Form</h1>
+
+<!-- <h2>Template Driven Form with Validation</h2> -->
+<!-- <form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.controls)> -->
+<!--
+<form #loginForm="ngForm" (ngSubmit)=userLogin(loginForm.value)>
+  <input type="email" placeholder="Enter Email" name="email" required #email="ngModel" ngModel/>
+  <br/>
+  <span *ngIf="email.invalid && email.touched" style="color:red">Please enter a valid email</span>
+  <br>
+  <input type="password" placeholder="Enter Password" minlength="3" required #password="ngModel" name="password" ngModel/>
+  <br>
+  <span *ngIf="password.invalid && password.touched" style="color:red">Please enter correct password</span>
+  <br>
+  <button [disabled]="loginForm.invalid">Login</button>
+</form>
+-->
+<!-- <button (click)=userLogin(loginForm.value)>Out Side Login</button> -->
+<!-- Regex:-> pattern="[a-zA-Z]*$" -->
+
+<h2>Reactive Form with Validation</h2>
+<form [formGroup]="registerForm" (ngSubmit)="userRegister(registerForm.value)">
+  <input
+    type="text"
+    placeholder="Enter Name"
+    name="name"
+    formControlName="name"
+  />
+  <br />
+  <span *ngIf="name && name.invalid && name.touched" style="color: red">
+    Please enter a your name
+  </span>
+  <br />
+  <input
+    type="email"
+    placeholder="Enter Email"
+    name="email"
+    formControlName="email"
+  />
+  <br />
+  <span *ngIf="email && email.invalid && email.touched" style="color: red">
+    Please enter a valid email
+  </span>
+  <br />
+  <input
+    type="password"
+    placeholder="Enter Password"
+    name="password"
+    formControlName="password"
+  />
+  <br />
+  <span
+    *ngIf="password && password.invalid && password.touched"
+    style="color: red"
+  >
+    Please enter correct password
+  </span>
+  <br />
+  <button [disabled]="registerForm.invalid">Register</button>
+</form>

@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background: #0099ff;
+}
+
+header .brand a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 24px;
+  color: antiquewhite;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+header nav ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+header nav ul li a {
+  margin: 0 20px;
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  color: antiquewhite;
+}
+
+header nav ul li a:hover{
+  color: #fcfcfc;
+}
+
