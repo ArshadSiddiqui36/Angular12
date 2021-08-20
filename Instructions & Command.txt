@@ -1,0 +1,129 @@
+=> Prerequisite: Node
+
+=> Installing Angular CLI
+* run > npm install -g @angular/cli
+
+=> Basic workflow
+* run > ng help
+* run > ng generate --help
+
+=> Create & Run App
+* run > ng new my-first-project
+* run > cd my-first-project
+* run > ng serve
+
+=> Workspaces and project files
+* run > ng build my-app -c production
+
+=> Add Angular Bootstrap using Angular CLI
+* run > ng add @ng-bootstrap/ng-bootstrap
+
+................................................................
+=> Add Bootstrap
+* run > npm install bootstrap
+
+=> Add JQuery
+* run > npm install jquery
+
+=> Add Bootstrap CSS & JS in "angular.json" file
+
+  "architect": {
+    "build": {
+      ...
+        "styles": [
+          "src/styles.css",
+          "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+        ],
+        "scripts": [
+          "./node_modules/bootstrap/dist/js/bootstrap.js"
+        ]
+        ...
+    }
+................................................................
+
+=> Create New Component
+* run > ng generate component component_name
+* run > ng generate component Components_Folder/component_name
+* run > ng generate component MyComponents/component
+
+=> Inline Style
+* run > ng generate component component_name --inline-template
+* run > ng generate component component_name --inline-style
+* run > ng generate component component_name --inline-template --inline-style
+
+=> Create New Module
+* run > ng generate module module_name
+* run > ng generate module user_auth
+
+=> Import & Export Module
+	=> Import Module inside App Module
+	import {ModuleName} from './';
+	@NgModule({
+	  imports:[component_name]
+	})
+
+	=> Export Component inside Module
+	@NgModule({
+	  exports:[component_name]
+	})
+
+
+
+=> Create Component inside Module
+* run > ng generate module module_name/component_name
+
+
+=> Angular Material UI
+* run > ng add @angular/material
+
+=> More than Module specify the Mudule Name to import
+* > ng g c components/form --module ../app
+
+=> Skip Import during generate Component or Pipes
+* run > ng g component component-name --skip-import
+
+=> More than one module matches
+* Specify the module using the --module parameter.
+* For example, if the main module is app.module.ts, run this:
+
+* run > ng g c new-component --module app
+Or if you are in an other directory then
+
+* run > ng g c component-name --module ../
+
+* run > ng g c new-component --module app
+//Or if you are in an other directory then
+* > ng g c component-name --module ../
+
+
+
+=> Create Directive
+* run > ng generate directive directive_name
+* run > ng generate directive Folder_Name/directive_name
+* run > ng g d directive_name
+
+
+
+=> Create Service
+* run > ng generate service service_name
+* run > ng generate service services/service_name
+
+
+=> Angular Version Update
+* ru > ng update [options]
+* run > ng update @angular/cli @angular/core
+* run > ng update @angular/cli@^<major_version> @angular/core@^<major_version>
+* run > ng update @angular/cli@^10 @angular/core@^10
+* run > npm install node-modules --save
+
+
+
+
+
+
+
+......................................................
+=> Extension
+Theme : Snazzy operator
++ Add
+Font : adoperator mono
